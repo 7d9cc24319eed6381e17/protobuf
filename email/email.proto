@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package email;
+option go_package = "github.com/7d9cc24319eed6381e17/protobuf/email";
+
+message Alert {
+    string ID = 1;
+    string ClientID = 2;
+    string Symbol = 3;
+    float Price = 4;
+    bool Deviation = 5;
+}
+
+service Email {
+    rpc AlertNotification(Alert) returns (google.protobuf.Empty) {}
+}

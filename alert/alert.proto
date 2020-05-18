@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package alert;
+option go_package = "github.com/7d9cc24319eed6381e17/protobuf/alert";
+
+message Stock {
+    string Symbol = 1;
+    float Price = 2;
+}
+
+service Alert {
+    rpc newStockData(Stock) returns (google.protobuf.Empty) {}
+}
