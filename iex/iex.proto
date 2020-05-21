@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package fmp;
-option go_package = "github.com/7d9cc24319eed6381e17/protobuf/fmp";
+package iex;
+option go_package = "github.com/7d9cc24319eed6381e17/protobuf/iex";
 
 message StockRequest {
     string symbol = 1;

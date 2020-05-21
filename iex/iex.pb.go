@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.21.0
 // 	protoc        v3.11.4
-// source: fmp.proto
+// source: iex.proto
 
-package fmp
+package iex
 
 import (
 	context "context"
@@ -40,7 +40,7 @@ type StockRequest struct {
 func (x *StockRequest) Reset() {
 	*x = StockRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_fmp_proto_msgTypes[0]
+		mi := &file_iex_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -53,7 +53,7 @@ func (x *StockRequest) String() string {
 func (*StockRequest) ProtoMessage() {}
 
 func (x *StockRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_fmp_proto_msgTypes[0]
+	mi := &file_iex_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -66,7 +66,7 @@ func (x *StockRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StockRequest.ProtoReflect.Descriptor instead.
 func (*StockRequest) Descriptor() ([]byte, []int) {
-	return file_fmp_proto_rawDescGZIP(), []int{0}
+	return file_iex_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *StockRequest) GetSymbol() string {
@@ -88,7 +88,7 @@ type Stock struct {
 func (x *Stock) Reset() {
 	*x = Stock{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_fmp_proto_msgTypes[1]
+		mi := &file_iex_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -101,7 +101,7 @@ func (x *Stock) String() string {
 func (*Stock) ProtoMessage() {}
 
 func (x *Stock) ProtoReflect() protoreflect.Message {
-	mi := &file_fmp_proto_msgTypes[1]
+	mi := &file_iex_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -114,7 +114,7 @@ func (x *Stock) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Stock.ProtoReflect.Descriptor instead.
 func (*Stock) Descriptor() ([]byte, []int) {
-	return file_fmp_proto_rawDescGZIP(), []int{1}
+	return file_iex_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Stock) GetSymbol() string {
@@ -131,10 +131,10 @@ func (x *Stock) GetPrice() float32 {
 	return 0
 }
 
-var File_fmp_proto protoreflect.FileDescriptor
+var File_iex_proto protoreflect.FileDescriptor
 
-var file_fmp_proto_rawDesc = []byte{
-	0x0a, 0x09, 0x66, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x66, 0x6d, 0x70,
+var file_iex_proto_rawDesc = []byte{
+	0x0a, 0x09, 0x69, 0x65, 0x78, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x69, 0x65, 0x78,
 	0x22, 0x26, 0x0a, 0x0c, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x22, 0x35, 0x0a, 0x05, 0x53, 0x74, 0x6f, 0x63,
@@ -142,35 +142,35 @@ var file_fmp_proto_rawDesc = []byte{
 	0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x70, 0x72, 0x69,
 	0x63, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x70, 0x72, 0x69, 0x63, 0x65, 0x32,
 	0x3a, 0x0a, 0x03, 0x46, 0x6d, 0x70, 0x12, 0x33, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x52, 0x65, 0x61,
-	0x6c, 0x54, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x12, 0x11, 0x2e, 0x66, 0x6d, 0x70,
+	0x6c, 0x54, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x12, 0x11, 0x2e, 0x69, 0x65, 0x78,
 	0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0a, 0x2e,
-	0x66, 0x6d, 0x70, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x22, 0x00, 0x42, 0x2e, 0x5a, 0x2c, 0x67,
+	0x69, 0x65, 0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x22, 0x00, 0x42, 0x2e, 0x5a, 0x2c, 0x67,
 	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x37, 0x64, 0x39, 0x63, 0x63, 0x32,
 	0x34, 0x33, 0x31, 0x39, 0x65, 0x65, 0x64, 0x36, 0x33, 0x38, 0x31, 0x65, 0x31, 0x37, 0x2f, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x66, 0x6d, 0x70, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x69, 0x65, 0x78, 0x62, 0x06, 0x70, 0x72, 0x6f,
 	0x74, 0x6f, 0x33,
 }
 
 var (
-	file_fmp_proto_rawDescOnce sync.Once
-	file_fmp_proto_rawDescData = file_fmp_proto_rawDesc
+	file_iex_proto_rawDescOnce sync.Once
+	file_iex_proto_rawDescData = file_iex_proto_rawDesc
 )
 
-func file_fmp_proto_rawDescGZIP() []byte {
-	file_fmp_proto_rawDescOnce.Do(func() {
-		file_fmp_proto_rawDescData = protoimpl.X.CompressGZIP(file_fmp_proto_rawDescData)
+func file_iex_proto_rawDescGZIP() []byte {
+	file_iex_proto_rawDescOnce.Do(func() {
+		file_iex_proto_rawDescData = protoimpl.X.CompressGZIP(file_iex_proto_rawDescData)
 	})
-	return file_fmp_proto_rawDescData
+	return file_iex_proto_rawDescData
 }
 
-var file_fmp_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_fmp_proto_goTypes = []interface{}{
-	(*StockRequest)(nil), // 0: fmp.StockRequest
-	(*Stock)(nil),        // 1: fmp.Stock
+var file_iex_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_iex_proto_goTypes = []interface{}{
+	(*StockRequest)(nil), // 0: iex.StockRequest
+	(*Stock)(nil),        // 1: iex.Stock
 }
-var file_fmp_proto_depIdxs = []int32{
-	0, // 0: fmp.Fmp.GetRealTimeStock:input_type -> fmp.StockRequest
-	1, // 1: fmp.Fmp.GetRealTimeStock:output_type -> fmp.Stock
+var file_iex_proto_depIdxs = []int32{
+	0, // 0: iex.Fmp.GetRealTimeStock:input_type -> iex.StockRequest
+	1, // 1: iex.Fmp.GetRealTimeStock:output_type -> iex.Stock
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -178,13 +178,13 @@ var file_fmp_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_fmp_proto_init() }
-func file_fmp_proto_init() {
-	if File_fmp_proto != nil {
+func init() { file_iex_proto_init() }
+func file_iex_proto_init() {
+	if File_iex_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_fmp_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_iex_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StockRequest); i {
 			case 0:
 				return &v.state
@@ -196,7 +196,7 @@ func file_fmp_proto_init() {
 				return nil
 			}
 		}
-		file_fmp_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_iex_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Stock); i {
 			case 0:
 				return &v.state
@@ -213,20 +213,20 @@ func file_fmp_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_fmp_proto_rawDesc,
+			RawDescriptor: file_iex_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_fmp_proto_goTypes,
-		DependencyIndexes: file_fmp_proto_depIdxs,
-		MessageInfos:      file_fmp_proto_msgTypes,
+		GoTypes:           file_iex_proto_goTypes,
+		DependencyIndexes: file_iex_proto_depIdxs,
+		MessageInfos:      file_iex_proto_msgTypes,
 	}.Build()
-	File_fmp_proto = out.File
-	file_fmp_proto_rawDesc = nil
-	file_fmp_proto_goTypes = nil
-	file_fmp_proto_depIdxs = nil
+	File_iex_proto = out.File
+	file_iex_proto_rawDesc = nil
+	file_iex_proto_goTypes = nil
+	file_iex_proto_depIdxs = nil
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -254,7 +254,7 @@ func NewFmpClient(cc grpc.ClientConnInterface) FmpClient {
 
 func (c *fmpClient) GetRealTimeStock(ctx context.Context, in *StockRequest, opts ...grpc.CallOption) (*Stock, error) {
 	out := new(Stock)
-	err := c.cc.Invoke(ctx, "/fmp.Fmp/GetRealTimeStock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/iex.Fmp/GetRealTimeStock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -288,7 +288,7 @@ func _Fmp_GetRealTimeStock_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/fmp.Fmp/GetRealTimeStock",
+		FullMethod: "/iex.Fmp/GetRealTimeStock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FmpServer).GetRealTimeStock(ctx, req.(*StockRequest))
@@ -297,7 +297,7 @@ func _Fmp_GetRealTimeStock_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 var _Fmp_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "fmp.Fmp",
+	ServiceName: "iex.Fmp",
 	HandlerType: (*FmpServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -306,5 +306,5 @@ var _Fmp_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "fmp.proto",
+	Metadata: "iex.proto",
 }
