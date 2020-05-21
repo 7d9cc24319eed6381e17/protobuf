@@ -141,7 +141,7 @@ var file_iex_proto_rawDesc = []byte{
 	0x6b, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x70, 0x72, 0x69,
 	0x63, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x70, 0x72, 0x69, 0x63, 0x65, 0x32,
-	0x3a, 0x0a, 0x03, 0x46, 0x6d, 0x70, 0x12, 0x33, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x52, 0x65, 0x61,
+	0x3a, 0x0a, 0x03, 0x49, 0x65, 0x78, 0x12, 0x33, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x52, 0x65, 0x61,
 	0x6c, 0x54, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x12, 0x11, 0x2e, 0x69, 0x65, 0x78,
 	0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0a, 0x2e,
 	0x69, 0x65, 0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x22, 0x00, 0x42, 0x2e, 0x5a, 0x2c, 0x67,
@@ -169,8 +169,8 @@ var file_iex_proto_goTypes = []interface{}{
 	(*Stock)(nil),        // 1: iex.Stock
 }
 var file_iex_proto_depIdxs = []int32{
-	0, // 0: iex.Fmp.GetRealTimeStock:input_type -> iex.StockRequest
-	1, // 1: iex.Fmp.GetRealTimeStock:output_type -> iex.Stock
+	0, // 0: iex.Iex.GetRealTimeStock:input_type -> iex.StockRequest
+	1, // 1: iex.Iex.GetRealTimeStock:output_type -> iex.Stock
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -237,72 +237,72 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// FmpClient is the client API for Fmp service.
+// IexClient is the client API for Iex service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type FmpClient interface {
+type IexClient interface {
 	GetRealTimeStock(ctx context.Context, in *StockRequest, opts ...grpc.CallOption) (*Stock, error)
 }
 
-type fmpClient struct {
+type iexClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewFmpClient(cc grpc.ClientConnInterface) FmpClient {
-	return &fmpClient{cc}
+func NewIexClient(cc grpc.ClientConnInterface) IexClient {
+	return &iexClient{cc}
 }
 
-func (c *fmpClient) GetRealTimeStock(ctx context.Context, in *StockRequest, opts ...grpc.CallOption) (*Stock, error) {
+func (c *iexClient) GetRealTimeStock(ctx context.Context, in *StockRequest, opts ...grpc.CallOption) (*Stock, error) {
 	out := new(Stock)
-	err := c.cc.Invoke(ctx, "/iex.Fmp/GetRealTimeStock", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/iex.Iex/GetRealTimeStock", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// FmpServer is the server API for Fmp service.
-type FmpServer interface {
+// IexServer is the server API for Iex service.
+type IexServer interface {
 	GetRealTimeStock(context.Context, *StockRequest) (*Stock, error)
 }
 
-// UnimplementedFmpServer can be embedded to have forward compatible implementations.
-type UnimplementedFmpServer struct {
+// UnimplementedIexServer can be embedded to have forward compatible implementations.
+type UnimplementedIexServer struct {
 }
 
-func (*UnimplementedFmpServer) GetRealTimeStock(context.Context, *StockRequest) (*Stock, error) {
+func (*UnimplementedIexServer) GetRealTimeStock(context.Context, *StockRequest) (*Stock, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRealTimeStock not implemented")
 }
 
-func RegisterFmpServer(s *grpc.Server, srv FmpServer) {
-	s.RegisterService(&_Fmp_serviceDesc, srv)
+func RegisterIexServer(s *grpc.Server, srv IexServer) {
+	s.RegisterService(&_Iex_serviceDesc, srv)
 }
 
-func _Fmp_GetRealTimeStock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Iex_GetRealTimeStock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(StockRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FmpServer).GetRealTimeStock(ctx, in)
+		return srv.(IexServer).GetRealTimeStock(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/iex.Fmp/GetRealTimeStock",
+		FullMethod: "/iex.Iex/GetRealTimeStock",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FmpServer).GetRealTimeStock(ctx, req.(*StockRequest))
+		return srv.(IexServer).GetRealTimeStock(ctx, req.(*StockRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Fmp_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "iex.Fmp",
-	HandlerType: (*FmpServer)(nil),
+var _Iex_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "iex.Iex",
+	HandlerType: (*IexServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetRealTimeStock",
-			Handler:    _Fmp_GetRealTimeStock_Handler,
+			Handler:    _Iex_GetRealTimeStock_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
