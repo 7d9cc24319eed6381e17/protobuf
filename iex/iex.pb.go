@@ -29,7 +29,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type StockRequest struct {
+type StockQuoteRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -37,8 +37,8 @@ type StockRequest struct {
 	Symbol string `protobuf:"bytes,1,opt,name=symbol,proto3" json:"symbol,omitempty"`
 }
 
-func (x *StockRequest) Reset() {
-	*x = StockRequest{}
+func (x *StockQuoteRequest) Reset() {
+	*x = StockQuoteRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_iex_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -46,13 +46,13 @@ func (x *StockRequest) Reset() {
 	}
 }
 
-func (x *StockRequest) String() string {
+func (x *StockQuoteRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*StockRequest) ProtoMessage() {}
+func (*StockQuoteRequest) ProtoMessage() {}
 
-func (x *StockRequest) ProtoReflect() protoreflect.Message {
+func (x *StockQuoteRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_iex_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -64,19 +64,19 @@ func (x *StockRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use StockRequest.ProtoReflect.Descriptor instead.
-func (*StockRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use StockQuoteRequest.ProtoReflect.Descriptor instead.
+func (*StockQuoteRequest) Descriptor() ([]byte, []int) {
 	return file_iex_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *StockRequest) GetSymbol() string {
+func (x *StockQuoteRequest) GetSymbol() string {
 	if x != nil {
 		return x.Symbol
 	}
 	return ""
 }
 
-type Stock struct {
+type StockQuoteResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -85,8 +85,8 @@ type Stock struct {
 	Price  float32 `protobuf:"fixed32,2,opt,name=price,proto3" json:"price,omitempty"`
 }
 
-func (x *Stock) Reset() {
-	*x = Stock{}
+func (x *StockQuoteResponse) Reset() {
+	*x = StockQuoteResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_iex_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -94,13 +94,13 @@ func (x *Stock) Reset() {
 	}
 }
 
-func (x *Stock) String() string {
+func (x *StockQuoteResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*Stock) ProtoMessage() {}
+func (*StockQuoteResponse) ProtoMessage() {}
 
-func (x *Stock) ProtoReflect() protoreflect.Message {
+func (x *StockQuoteResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_iex_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -112,35 +112,35 @@ func (x *Stock) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use Stock.ProtoReflect.Descriptor instead.
-func (*Stock) Descriptor() ([]byte, []int) {
+// Deprecated: Use StockQuoteResponse.ProtoReflect.Descriptor instead.
+func (*StockQuoteResponse) Descriptor() ([]byte, []int) {
 	return file_iex_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *Stock) GetSymbol() string {
+func (x *StockQuoteResponse) GetSymbol() string {
 	if x != nil {
 		return x.Symbol
 	}
 	return ""
 }
 
-func (x *Stock) GetPrice() float32 {
+func (x *StockQuoteResponse) GetPrice() float32 {
 	if x != nil {
 		return x.Price
 	}
 	return 0
 }
 
-type StockRequestBatch struct {
+type StockQuoteRequestBatch struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Symbols []*StockRequest `protobuf:"bytes,1,rep,name=symbols,proto3" json:"symbols,omitempty"`
+	Symbols []*StockQuoteRequest `protobuf:"bytes,1,rep,name=symbols,proto3" json:"symbols,omitempty"`
 }
 
-func (x *StockRequestBatch) Reset() {
-	*x = StockRequestBatch{}
+func (x *StockQuoteRequestBatch) Reset() {
+	*x = StockQuoteRequestBatch{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_iex_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -148,13 +148,13 @@ func (x *StockRequestBatch) Reset() {
 	}
 }
 
-func (x *StockRequestBatch) String() string {
+func (x *StockQuoteRequestBatch) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*StockRequestBatch) ProtoMessage() {}
+func (*StockQuoteRequestBatch) ProtoMessage() {}
 
-func (x *StockRequestBatch) ProtoReflect() protoreflect.Message {
+func (x *StockQuoteRequestBatch) ProtoReflect() protoreflect.Message {
 	mi := &file_iex_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -166,28 +166,28 @@ func (x *StockRequestBatch) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use StockRequestBatch.ProtoReflect.Descriptor instead.
-func (*StockRequestBatch) Descriptor() ([]byte, []int) {
+// Deprecated: Use StockQuoteRequestBatch.ProtoReflect.Descriptor instead.
+func (*StockQuoteRequestBatch) Descriptor() ([]byte, []int) {
 	return file_iex_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *StockRequestBatch) GetSymbols() []*StockRequest {
+func (x *StockQuoteRequestBatch) GetSymbols() []*StockQuoteRequest {
 	if x != nil {
 		return x.Symbols
 	}
 	return nil
 }
 
-type StockResponseBatch struct {
+type StockQuoteResponseBatch struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Stocks []*Stock `protobuf:"bytes,1,rep,name=stocks,proto3" json:"stocks,omitempty"`
+	Quotes []*StockQuoteResponse `protobuf:"bytes,1,rep,name=quotes,proto3" json:"quotes,omitempty"`
 }
 
-func (x *StockResponseBatch) Reset() {
-	*x = StockResponseBatch{}
+func (x *StockQuoteResponseBatch) Reset() {
+	*x = StockQuoteResponseBatch{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_iex_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -195,13 +195,13 @@ func (x *StockResponseBatch) Reset() {
 	}
 }
 
-func (x *StockResponseBatch) String() string {
+func (x *StockQuoteResponseBatch) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*StockResponseBatch) ProtoMessage() {}
+func (*StockQuoteResponseBatch) ProtoMessage() {}
 
-func (x *StockResponseBatch) ProtoReflect() protoreflect.Message {
+func (x *StockQuoteResponseBatch) ProtoReflect() protoreflect.Message {
 	mi := &file_iex_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -213,14 +213,14 @@ func (x *StockResponseBatch) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use StockResponseBatch.ProtoReflect.Descriptor instead.
-func (*StockResponseBatch) Descriptor() ([]byte, []int) {
+// Deprecated: Use StockQuoteResponseBatch.ProtoReflect.Descriptor instead.
+func (*StockQuoteResponseBatch) Descriptor() ([]byte, []int) {
 	return file_iex_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *StockResponseBatch) GetStocks() []*Stock {
+func (x *StockQuoteResponseBatch) GetQuotes() []*StockQuoteResponse {
 	if x != nil {
-		return x.Stocks
+		return x.Quotes
 	}
 	return nil
 }
@@ -229,32 +229,37 @@ var File_iex_proto protoreflect.FileDescriptor
 
 var file_iex_proto_rawDesc = []byte{
 	0x0a, 0x09, 0x69, 0x65, 0x78, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x69, 0x65, 0x78,
-	0x22, 0x26, 0x0a, 0x0c, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x22, 0x35, 0x0a, 0x05, 0x53, 0x74, 0x6f, 0x63,
-	0x6b, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x70, 0x72, 0x69,
-	0x63, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x70, 0x72, 0x69, 0x63, 0x65, 0x22,
-	0x40, 0x0a, 0x11, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x42,
-	0x61, 0x74, 0x63, 0x68, 0x12, 0x2b, 0x0a, 0x07, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x73, 0x18,
-	0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x11, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63,
-	0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x52, 0x07, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c,
-	0x73, 0x22, 0x38, 0x0a, 0x12, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x42, 0x61, 0x74, 0x63, 0x68, 0x12, 0x22, 0x0a, 0x06, 0x73, 0x74, 0x6f, 0x63, 0x6b,
-	0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0a, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53, 0x74,
-	0x6f, 0x63, 0x6b, 0x52, 0x06, 0x73, 0x74, 0x6f, 0x63, 0x6b, 0x73, 0x32, 0x86, 0x01, 0x0a, 0x03,
-	0x49, 0x65, 0x78, 0x12, 0x33, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x52, 0x65, 0x61, 0x6c, 0x54, 0x69,
-	0x6d, 0x65, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x12, 0x11, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53, 0x74,
-	0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x0a, 0x2e, 0x69, 0x65, 0x78,
-	0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x22, 0x00, 0x12, 0x4a, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x52,
-	0x65, 0x61, 0x6c, 0x54, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x42, 0x61, 0x74, 0x63,
-	0x68, 0x12, 0x16, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x42, 0x61, 0x74, 0x63, 0x68, 0x1a, 0x17, 0x2e, 0x69, 0x65, 0x78, 0x2e,
-	0x53, 0x74, 0x6f, 0x63, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x61, 0x74,
-	0x63, 0x68, 0x22, 0x00, 0x42, 0x2e, 0x5a, 0x2c, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
-	0x6f, 0x6d, 0x2f, 0x37, 0x64, 0x39, 0x63, 0x63, 0x32, 0x34, 0x33, 0x31, 0x39, 0x65, 0x65, 0x64,
-	0x36, 0x33, 0x38, 0x31, 0x65, 0x31, 0x37, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66,
-	0x2f, 0x69, 0x65, 0x78, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x22, 0x2b, 0x0a, 0x11, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x22, 0x42, 0x0a,
+	0x12, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x12, 0x14, 0x0a, 0x05, 0x70,
+	0x72, 0x69, 0x63, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x02, 0x52, 0x05, 0x70, 0x72, 0x69, 0x63,
+	0x65, 0x22, 0x4a, 0x0a, 0x16, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x42, 0x61, 0x74, 0x63, 0x68, 0x12, 0x30, 0x0a, 0x07, 0x73,
+	0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x69,
+	0x65, 0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x52, 0x07, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x73, 0x22, 0x4a, 0x0a,
+	0x17, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x42, 0x61, 0x74, 0x63, 0x68, 0x12, 0x2f, 0x0a, 0x06, 0x71, 0x75, 0x6f, 0x74,
+	0x65, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53,
+	0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x52, 0x06, 0x71, 0x75, 0x6f, 0x74, 0x65, 0x73, 0x32, 0xac, 0x01, 0x0a, 0x03, 0x49, 0x65,
+	0x78, 0x12, 0x4a, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x52, 0x65, 0x61, 0x6c, 0x54, 0x69, 0x6d, 0x65,
+	0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x12, 0x16, 0x2e, 0x69, 0x65, 0x78,
+	0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x17, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75,
+	0x6f, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x59, 0x0a,
+	0x1a, 0x47, 0x65, 0x74, 0x52, 0x65, 0x61, 0x6c, 0x54, 0x69, 0x6d, 0x65, 0x53, 0x74, 0x6f, 0x63,
+	0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x42, 0x61, 0x74, 0x63, 0x68, 0x12, 0x1b, 0x2e, 0x69, 0x65,
+	0x78, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x42, 0x61, 0x74, 0x63, 0x68, 0x1a, 0x1c, 0x2e, 0x69, 0x65, 0x78, 0x2e, 0x53,
+	0x74, 0x6f, 0x63, 0x6b, 0x51, 0x75, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x42, 0x61, 0x74, 0x63, 0x68, 0x22, 0x00, 0x42, 0x2e, 0x5a, 0x2c, 0x67, 0x69, 0x74, 0x68,
+	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x37, 0x64, 0x39, 0x63, 0x63, 0x32, 0x34, 0x33, 0x31,
+	0x39, 0x65, 0x65, 0x64, 0x36, 0x33, 0x38, 0x31, 0x65, 0x31, 0x37, 0x2f, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x62, 0x75, 0x66, 0x2f, 0x69, 0x65, 0x78, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -271,18 +276,18 @@ func file_iex_proto_rawDescGZIP() []byte {
 
 var file_iex_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_iex_proto_goTypes = []interface{}{
-	(*StockRequest)(nil),       // 0: iex.StockRequest
-	(*Stock)(nil),              // 1: iex.Stock
-	(*StockRequestBatch)(nil),  // 2: iex.StockRequestBatch
-	(*StockResponseBatch)(nil), // 3: iex.StockResponseBatch
+	(*StockQuoteRequest)(nil),       // 0: iex.StockQuoteRequest
+	(*StockQuoteResponse)(nil),      // 1: iex.StockQuoteResponse
+	(*StockQuoteRequestBatch)(nil),  // 2: iex.StockQuoteRequestBatch
+	(*StockQuoteResponseBatch)(nil), // 3: iex.StockQuoteResponseBatch
 }
 var file_iex_proto_depIdxs = []int32{
-	0, // 0: iex.StockRequestBatch.symbols:type_name -> iex.StockRequest
-	1, // 1: iex.StockResponseBatch.stocks:type_name -> iex.Stock
-	0, // 2: iex.Iex.GetRealTimeStock:input_type -> iex.StockRequest
-	2, // 3: iex.Iex.GetRealTimeStockBatch:input_type -> iex.StockRequestBatch
-	1, // 4: iex.Iex.GetRealTimeStock:output_type -> iex.Stock
-	3, // 5: iex.Iex.GetRealTimeStockBatch:output_type -> iex.StockResponseBatch
+	0, // 0: iex.StockQuoteRequestBatch.symbols:type_name -> iex.StockQuoteRequest
+	1, // 1: iex.StockQuoteResponseBatch.quotes:type_name -> iex.StockQuoteResponse
+	0, // 2: iex.Iex.GetRealTimeStockQuote:input_type -> iex.StockQuoteRequest
+	2, // 3: iex.Iex.GetRealTimeStockQuoteBatch:input_type -> iex.StockQuoteRequestBatch
+	1, // 4: iex.Iex.GetRealTimeStockQuote:output_type -> iex.StockQuoteResponse
+	3, // 5: iex.Iex.GetRealTimeStockQuoteBatch:output_type -> iex.StockQuoteResponseBatch
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -297,7 +302,7 @@ func file_iex_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_iex_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StockRequest); i {
+			switch v := v.(*StockQuoteRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -309,7 +314,7 @@ func file_iex_proto_init() {
 			}
 		}
 		file_iex_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Stock); i {
+			switch v := v.(*StockQuoteResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -321,7 +326,7 @@ func file_iex_proto_init() {
 			}
 		}
 		file_iex_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StockRequestBatch); i {
+			switch v := v.(*StockQuoteRequestBatch); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -333,7 +338,7 @@ func file_iex_proto_init() {
 			}
 		}
 		file_iex_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StockResponseBatch); i {
+			switch v := v.(*StockQuoteResponseBatch); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -377,8 +382,8 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type IexClient interface {
-	GetRealTimeStock(ctx context.Context, in *StockRequest, opts ...grpc.CallOption) (*Stock, error)
-	GetRealTimeStockBatch(ctx context.Context, in *StockRequestBatch, opts ...grpc.CallOption) (*StockResponseBatch, error)
+	GetRealTimeStockQuote(ctx context.Context, in *StockQuoteRequest, opts ...grpc.CallOption) (*StockQuoteResponse, error)
+	GetRealTimeStockQuoteBatch(ctx context.Context, in *StockQuoteRequestBatch, opts ...grpc.CallOption) (*StockQuoteResponseBatch, error)
 }
 
 type iexClient struct {
@@ -389,18 +394,18 @@ func NewIexClient(cc grpc.ClientConnInterface) IexClient {
 	return &iexClient{cc}
 }
 
-func (c *iexClient) GetRealTimeStock(ctx context.Context, in *StockRequest, opts ...grpc.CallOption) (*Stock, error) {
-	out := new(Stock)
-	err := c.cc.Invoke(ctx, "/iex.Iex/GetRealTimeStock", in, out, opts...)
+func (c *iexClient) GetRealTimeStockQuote(ctx context.Context, in *StockQuoteRequest, opts ...grpc.CallOption) (*StockQuoteResponse, error) {
+	out := new(StockQuoteResponse)
+	err := c.cc.Invoke(ctx, "/iex.Iex/GetRealTimeStockQuote", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iexClient) GetRealTimeStockBatch(ctx context.Context, in *StockRequestBatch, opts ...grpc.CallOption) (*StockResponseBatch, error) {
-	out := new(StockResponseBatch)
-	err := c.cc.Invoke(ctx, "/iex.Iex/GetRealTimeStockBatch", in, out, opts...)
+func (c *iexClient) GetRealTimeStockQuoteBatch(ctx context.Context, in *StockQuoteRequestBatch, opts ...grpc.CallOption) (*StockQuoteResponseBatch, error) {
+	out := new(StockQuoteResponseBatch)
+	err := c.cc.Invoke(ctx, "/iex.Iex/GetRealTimeStockQuoteBatch", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -409,57 +414,57 @@ func (c *iexClient) GetRealTimeStockBatch(ctx context.Context, in *StockRequestB
 
 // IexServer is the server API for Iex service.
 type IexServer interface {
-	GetRealTimeStock(context.Context, *StockRequest) (*Stock, error)
-	GetRealTimeStockBatch(context.Context, *StockRequestBatch) (*StockResponseBatch, error)
+	GetRealTimeStockQuote(context.Context, *StockQuoteRequest) (*StockQuoteResponse, error)
+	GetRealTimeStockQuoteBatch(context.Context, *StockQuoteRequestBatch) (*StockQuoteResponseBatch, error)
 }
 
 // UnimplementedIexServer can be embedded to have forward compatible implementations.
 type UnimplementedIexServer struct {
 }
 
-func (*UnimplementedIexServer) GetRealTimeStock(context.Context, *StockRequest) (*Stock, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetRealTimeStock not implemented")
+func (*UnimplementedIexServer) GetRealTimeStockQuote(context.Context, *StockQuoteRequest) (*StockQuoteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRealTimeStockQuote not implemented")
 }
-func (*UnimplementedIexServer) GetRealTimeStockBatch(context.Context, *StockRequestBatch) (*StockResponseBatch, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetRealTimeStockBatch not implemented")
+func (*UnimplementedIexServer) GetRealTimeStockQuoteBatch(context.Context, *StockQuoteRequestBatch) (*StockQuoteResponseBatch, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRealTimeStockQuoteBatch not implemented")
 }
 
 func RegisterIexServer(s *grpc.Server, srv IexServer) {
 	s.RegisterService(&_Iex_serviceDesc, srv)
 }
 
-func _Iex_GetRealTimeStock_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(StockRequest)
+func _Iex_GetRealTimeStockQuote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(StockQuoteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IexServer).GetRealTimeStock(ctx, in)
+		return srv.(IexServer).GetRealTimeStockQuote(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/iex.Iex/GetRealTimeStock",
+		FullMethod: "/iex.Iex/GetRealTimeStockQuote",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IexServer).GetRealTimeStock(ctx, req.(*StockRequest))
+		return srv.(IexServer).GetRealTimeStockQuote(ctx, req.(*StockQuoteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Iex_GetRealTimeStockBatch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(StockRequestBatch)
+func _Iex_GetRealTimeStockQuoteBatch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(StockQuoteRequestBatch)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IexServer).GetRealTimeStockBatch(ctx, in)
+		return srv.(IexServer).GetRealTimeStockQuoteBatch(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/iex.Iex/GetRealTimeStockBatch",
+		FullMethod: "/iex.Iex/GetRealTimeStockQuoteBatch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IexServer).GetRealTimeStockBatch(ctx, req.(*StockRequestBatch))
+		return srv.(IexServer).GetRealTimeStockQuoteBatch(ctx, req.(*StockQuoteRequestBatch))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -469,12 +474,12 @@ var _Iex_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*IexServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "GetRealTimeStock",
-			Handler:    _Iex_GetRealTimeStock_Handler,
+			MethodName: "GetRealTimeStockQuote",
+			Handler:    _Iex_GetRealTimeStockQuote_Handler,
 		},
 		{
-			MethodName: "GetRealTimeStockBatch",
-			Handler:    _Iex_GetRealTimeStockBatch_Handler,
+			MethodName: "GetRealTimeStockQuoteBatch",
+			Handler:    _Iex_GetRealTimeStockQuoteBatch_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
