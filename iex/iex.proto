@@ -12,6 +12,15 @@ message Stock {
     float price = 2;
 }
 
+message StockRequestBatch {
+    repeated StockRequest symbols = 1;
+}
+
+message StockResponseBatch {
+    repeated Stock stocks = 1;
+}
+
 service Iex {
     rpc GetRealTimeStock(StockRequest) returns (Stock) {};
+    rpc GetRealTimeStockBatch(StockRequestBatch) returns (StockResponseBatch) {};
 }
