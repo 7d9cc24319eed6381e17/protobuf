@@ -48,7 +48,7 @@ message StockNewsData {
     string related = 6;
     string image = 7;
     string lang = 8;
-    string hasPaywall = 9;
+    bool hasPaywall = 9;
 }
 
 message StockNewsRequest {
