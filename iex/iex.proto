@@ -40,7 +40,7 @@ message StockQuoteResponseBatch {
 
 // NEWS
 message StockNewsData {
-    int32 datetime = 1;
+    int64 datetime = 1;
     string headline = 2;
     string source = 3;
     string url = 4;
