@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package news;
+option go_package = "github.com/7d9cc24319eed6381e17/protobuf/news";
+
+message SubscribeRequest {
+    string symbol = 1;
+}
+
+message UnsubscribeRequest {
+    string symbol = 1;
+}
+
+service Iex {
+    // Subscriptions
+    rpc Subscribe(SubscribeRequest) returns (google.protobuf.Empty) {};
+    rpc Unsubscribe(UnsubscribeRequest) returns (google.protobuf.Empty) {};
+}
