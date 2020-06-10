@@ -135,19 +135,19 @@ var file_news_proto_rawDesc = []byte{
 	0x01, 0x28, 0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x22, 0x2c, 0x0a, 0x12, 0x55,
 	0x6e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x32, 0x87, 0x01, 0x0a, 0x03, 0x49, 0x65,
-	0x78, 0x12, 0x3d, 0x0a, 0x09, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x12, 0x16,
-	0x2e, 0x6e, 0x65, 0x77, 0x73, 0x2e, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00,
-	0x12, 0x41, 0x0a, 0x0b, 0x55, 0x6e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x12,
-	0x18, 0x2e, 0x6e, 0x65, 0x77, 0x73, 0x2e, 0x55, 0x6e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69,
-	0x62, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
-	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74,
-	0x79, 0x22, 0x00, 0x42, 0x2f, 0x5a, 0x2d, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
-	0x6d, 0x2f, 0x37, 0x64, 0x39, 0x63, 0x63, 0x32, 0x34, 0x33, 0x31, 0x39, 0x65, 0x65, 0x64, 0x36,
-	0x33, 0x38, 0x31, 0x65, 0x31, 0x37, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f,
-	0x6e, 0x65, 0x77, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x09, 0x52, 0x06, 0x73, 0x79, 0x6d, 0x62, 0x6f, 0x6c, 0x32, 0x88, 0x01, 0x0a, 0x04, 0x4e, 0x65,
+	0x77, 0x73, 0x12, 0x3d, 0x0a, 0x09, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x12,
+	0x16, 0x2e, 0x6e, 0x65, 0x77, 0x73, 0x2e, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22,
+	0x00, 0x12, 0x41, 0x0a, 0x0b, 0x55, 0x6e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65,
+	0x12, 0x18, 0x2e, 0x6e, 0x65, 0x77, 0x73, 0x2e, 0x55, 0x6e, 0x73, 0x75, 0x62, 0x73, 0x63, 0x72,
+	0x69, 0x62, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x67, 0x6f, 0x6f,
+	0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70,
+	0x74, 0x79, 0x22, 0x00, 0x42, 0x2f, 0x5a, 0x2d, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
+	0x6f, 0x6d, 0x2f, 0x37, 0x64, 0x39, 0x63, 0x63, 0x32, 0x34, 0x33, 0x31, 0x39, 0x65, 0x65, 0x64,
+	0x36, 0x33, 0x38, 0x31, 0x65, 0x31, 0x37, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66,
+	0x2f, 0x6e, 0x65, 0x77, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -169,10 +169,10 @@ var file_news_proto_goTypes = []interface{}{
 	(*empty.Empty)(nil),        // 2: google.protobuf.Empty
 }
 var file_news_proto_depIdxs = []int32{
-	0, // 0: news.Iex.Subscribe:input_type -> news.SubscribeRequest
-	1, // 1: news.Iex.Unsubscribe:input_type -> news.UnsubscribeRequest
-	2, // 2: news.Iex.Subscribe:output_type -> google.protobuf.Empty
-	2, // 3: news.Iex.Unsubscribe:output_type -> google.protobuf.Empty
+	0, // 0: news.News.Subscribe:input_type -> news.SubscribeRequest
+	1, // 1: news.News.Unsubscribe:input_type -> news.UnsubscribeRequest
+	2, // 2: news.News.Subscribe:output_type -> google.protobuf.Empty
+	2, // 3: news.News.Unsubscribe:output_type -> google.protobuf.Empty
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -239,110 +239,110 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// IexClient is the client API for Iex service.
+// NewsClient is the client API for News service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type IexClient interface {
+type NewsClient interface {
 	// Subscriptions
 	Subscribe(ctx context.Context, in *SubscribeRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	Unsubscribe(ctx context.Context, in *UnsubscribeRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 }
 
-type iexClient struct {
+type newsClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewIexClient(cc grpc.ClientConnInterface) IexClient {
-	return &iexClient{cc}
+func NewNewsClient(cc grpc.ClientConnInterface) NewsClient {
+	return &newsClient{cc}
 }
 
-func (c *iexClient) Subscribe(ctx context.Context, in *SubscribeRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *newsClient) Subscribe(ctx context.Context, in *SubscribeRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/news.Iex/Subscribe", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/news.News/Subscribe", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *iexClient) Unsubscribe(ctx context.Context, in *UnsubscribeRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *newsClient) Unsubscribe(ctx context.Context, in *UnsubscribeRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/news.Iex/Unsubscribe", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/news.News/Unsubscribe", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// IexServer is the server API for Iex service.
-type IexServer interface {
+// NewsServer is the server API for News service.
+type NewsServer interface {
 	// Subscriptions
 	Subscribe(context.Context, *SubscribeRequest) (*empty.Empty, error)
 	Unsubscribe(context.Context, *UnsubscribeRequest) (*empty.Empty, error)
 }
 
-// UnimplementedIexServer can be embedded to have forward compatible implementations.
-type UnimplementedIexServer struct {
+// UnimplementedNewsServer can be embedded to have forward compatible implementations.
+type UnimplementedNewsServer struct {
 }
 
-func (*UnimplementedIexServer) Subscribe(context.Context, *SubscribeRequest) (*empty.Empty, error) {
+func (*UnimplementedNewsServer) Subscribe(context.Context, *SubscribeRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Subscribe not implemented")
 }
-func (*UnimplementedIexServer) Unsubscribe(context.Context, *UnsubscribeRequest) (*empty.Empty, error) {
+func (*UnimplementedNewsServer) Unsubscribe(context.Context, *UnsubscribeRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Unsubscribe not implemented")
 }
 
-func RegisterIexServer(s *grpc.Server, srv IexServer) {
-	s.RegisterService(&_Iex_serviceDesc, srv)
+func RegisterNewsServer(s *grpc.Server, srv NewsServer) {
+	s.RegisterService(&_News_serviceDesc, srv)
 }
 
-func _Iex_Subscribe_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _News_Subscribe_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SubscribeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IexServer).Subscribe(ctx, in)
+		return srv.(NewsServer).Subscribe(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/news.Iex/Subscribe",
+		FullMethod: "/news.News/Subscribe",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IexServer).Subscribe(ctx, req.(*SubscribeRequest))
+		return srv.(NewsServer).Subscribe(ctx, req.(*SubscribeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Iex_Unsubscribe_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _News_Unsubscribe_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UnsubscribeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(IexServer).Unsubscribe(ctx, in)
+		return srv.(NewsServer).Unsubscribe(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/news.Iex/Unsubscribe",
+		FullMethod: "/news.News/Unsubscribe",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IexServer).Unsubscribe(ctx, req.(*UnsubscribeRequest))
+		return srv.(NewsServer).Unsubscribe(ctx, req.(*UnsubscribeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Iex_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "news.Iex",
-	HandlerType: (*IexServer)(nil),
+var _News_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "news.News",
+	HandlerType: (*NewsServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "Subscribe",
-			Handler:    _Iex_Subscribe_Handler,
+			Handler:    _News_Subscribe_Handler,
 		},
 		{
 			MethodName: "Unsubscribe",
-			Handler:    _Iex_Unsubscribe_Handler,
+			Handler:    _News_Unsubscribe_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

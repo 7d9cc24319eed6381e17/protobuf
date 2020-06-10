@@ -13,7 +13,7 @@ message UnsubscribeRequest {
     string symbol = 1;
 }
 
-service Iex {
+service News {
     // Subscriptions
     rpc Subscribe(SubscribeRequest) returns (google.protobuf.Empty) {};
     rpc Unsubscribe(UnsubscribeRequest) returns (google.protobuf.Empty) {};
