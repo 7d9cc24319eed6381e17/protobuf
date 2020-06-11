@@ -7,10 +7,14 @@ option go_package = "github.com/7d9cc24319eed6381e17/protobuf/news";
 
 message SubscribeRequest {
     string symbol = 1;
+    string consumer_id = 2;
+    string client_id = 3;
 }
 
 message UnsubscribeRequest {
     string symbol = 1;
+    string consumer_id = 2;
+    string client_id = 3;
 }
 
 service News {
