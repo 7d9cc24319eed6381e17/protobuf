@@ -30,4 +30,5 @@ service News {
     // Subscriptions
     rpc Subscribe(SubscribeRequest) returns (google.protobuf.Empty) {};
     rpc Unsubscribe(UnsubscribeRequest) returns (google.protobuf.Empty) {};
+    rpc ShowSubscriptions(ShowSubscriptionsRequest) returns (ShowSubscriptionsResponse) {};
 }
