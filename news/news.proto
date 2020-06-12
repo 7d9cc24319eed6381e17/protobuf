@@ -23,7 +23,7 @@ message ShowSubscriptionsRequest {
 }
 
 message ShowSubscriptionsResponse {
-    repeated string news = 1;
+    repeated string subscriptions = 1;
 }
 
 service News {
