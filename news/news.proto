@@ -6,15 +6,24 @@ package news;
 option go_package = "github.com/7d9cc24319eed6381e17/protobuf/news";
 
 message SubscribeRequest {
-    string symbol = 1;
-    string consumer_id = 2;
-    string client_id = 3;
+    string consumer_id = 1;
+    string client_id = 2;
+    string symbol = 3;
 }
 
 message UnsubscribeRequest {
-    string symbol = 1;
-    string consumer_id = 2;
-    string client_id = 3;
+    string consumer_id = 1;
+    string client_id = 2;
+    string symbol = 3;
+}
+
+message ShowSubscriptionsRequest {
+    string consumer_id = 1;
+    string client_id = 2;
+}
+
+message ShowSubscriptionsResponse {
+    repeated string news = 1;
 }
 
 service News {
